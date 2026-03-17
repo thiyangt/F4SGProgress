@@ -1,0 +1,46 @@
+---
+title: "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka"
+subtitle: "F4SG Grant: Progress Review"
+author: "Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Sciences, University of Sri Jayewardenepura"
+format: revealjs
+editor: visual
+---
+
+# Introduction
+
+##
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Key Economic Centres for Vegetables in Sri Lanka:**
+
+
+
+Dambulla: 
+
+  - Central Province
+  
+  - Mainly a supply market.
+
+Pettah (Colombo): 
+
+  - Western Province
+  
+  - Mainly a demand/retail market.
+  
+:::
+
+::: {.column width="50%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("map.png")
+```
+
+
+
+- Price fluctuations in Dambulla directly affect Pettah prices due to the supply chain.
+
+:::
+
+::::
