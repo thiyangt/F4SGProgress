@@ -2,7 +2,10 @@
 title: "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka"
 subtitle: "F4SG Research Grant - Midway Update"
 author: "Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Sciences, University of Sri Jayewardenepura"
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    margin: 0.05 
 editor: visual
 ---
 
