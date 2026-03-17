@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <meta name="author" content="Thiyanga S. Talagala   Department of Statistics,   Faculty of Applied Sciences, University of Sri Jayewardenepura">
+  <meta name="author" content="Thiyanga S. Talagala   Department of Statistics,   Faculty of Applied Sciences,   University of Sri Jayewardenepura, Sri Lanka">
   <title>F4SG-Midway Review – Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,8 +28,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -133,7 +199,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Sciences, University of Sri Jayewardenepura 
+Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Sciences, <br> University of Sri Jayewardenepura, Sri Lanka 
 </div>
 </div>
 </div>
@@ -173,35 +239,99 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <li>Price fluctuations in Dambulla directly affect Pettah prices due to the supply chain.</li>
 </ul>
 </div></div>
+</section></section>
+<section>
+<section id="data" class="title-slide slide level1 center">
+<h1>Data</h1>
+
 </section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="data-source" class="slide level2">
+<h2>Data Source</h2>
 <ul>
 <li><p>Daily price reports published by the Central Bank of Sri Lanka (CBSL)</p></li>
 <li><p>Link: https://www.cbsl.gov.lk/en/statistics/economic-indicators/price-report</p></li>
 </ul>
-</div><div class="column" style="width:30%;">
-<!-- empty column to create gap -->
-</div><div class="column" style="width:20%;">
-<div class="cell" data-layout-align="right">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-right">
-<figure>
-<p><img data-src="dailyreports.png" class="quarto-figure quarto-figure-right" style="height:100.0%" width="388"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
 </section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="dailyreports.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="a-sample-daily-price-reports" class="slide level2 allowframebreaks">
 <h2>A Sample Daily Price Reports</h2>
 
+<img data-src="dr.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="r-package-for-web-scrapping-data-from-daily-reports" class="slide level2">
+<h2>R package for Web Scrapping Data From Daily Reports</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb1-2"><a></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thiyangt/vegscraper"</span>)</span>
+<span id="cb1-3"><a></a>vegscraper<span class="sc">::</span><span class="fu">run_app</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img data-src="wsapp.png"></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:20%;">
+<p><img data-src="hex.png"></p>
+</div></div>
+</section>
+<section id="r-package-for-tidy-data" class="slide level2">
+<h2>R Package for Tidy Data</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb2-2"><a></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thiyangt/vegetablesSriLanka"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(vegetablesSriLanka)</span>
+<span id="cb3-2"><a></a><span class="fu">data</span>(<span class="st">"vegetables.srilanka"</span>)</span>
+<span id="cb3-3"><a></a><span class="fu">head</span>(vegetables.srilanka, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        Date  Item      Type   Market Price
+1 2016-08-01 Beans    Retail Dambulla   165
+2 2016-08-01 Beans    Retail   Pettah   160
+3 2016-08-01 Beans Wholesale Dambulla   130
+4 2016-08-01 Beans Wholesale   Pettah   140</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">tail</span>(vegetables.srilanka, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             Date   Item      Type   Market Price
+123789 2026-01-23 Tomato    Retail Dambulla   420
+123790 2026-01-23 Tomato    Retail   Pettah   350
+123791 2026-01-23 Tomato Wholesale Dambulla   390
+123792 2026-01-23 Tomato Wholesale   Pettah   300</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:20%;">
+<p><img data-src="vegetableSriLanka_hex.png"></p>
+</div></div>
+</section>
+<section id="vegetables-included-in-the-analysis" class="slide level2">
+<h2>Vegetables Included in the Analysis</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Beans"             "Big Onion (Imp)"   "Big Onion (Local)"
+ [4] "Brinjal"           "Cabbage"           "Carrot"           
+ [7] "Potato (Imp)"      "Potato (Local)"    "Pumpkin"          
+[10] "Red Onion (Imp)"   "Red Onion (Local)" "Tomato"           
+[13] "Snake gourd"       "Green Chilli"      "Lime"             </code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="pre-processing-and-exploratory-data-analysis" class="title-slide slide level1 center">
+<h1>Pre-processing and Exploratory Data Analysis</h1>
+
+</section>
+<section id="local-view-of-data" class="slide level2">
+<h2>Local View of Data</h2>
+<p><a href="https://thiyangt.github.io/vegetableBook/">https://thiyangt.github.io/vegetableBook/</a></p>
+</section>
+<section id="global-view-of-data" class="slide level2">
+<h2>Global View of Data</h2>
 
 
-<img data-src="dr.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section></section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

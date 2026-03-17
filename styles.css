@@ -1,0 +1,20 @@
+.reveal h1 {
+  font-size: 1.5em;  /* adjust as needed */
+}
+
+.reveal h2 {
+  font-size: 1em;
+}
+
+/* Target only the first slide */
+.reveal .slides section:first-of-type {
+  background-color: #ccffcc;  /* light green */
+  color: #000000;             /* black text for contrast */
+}
+
+/* Full title slide customization */
+.reveal .slides section.title-slide {
+  background-color: #ccffcc;  /* light green background */
+  color: #000000;             /* text color (black) */
+  text-align: center;         /* center the text */
+}

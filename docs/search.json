@@ -7,11 +7,11 @@
     "text": "Key Economic Centres for Vegetables in Sri Lanka:\nDambulla:\n\nCentral Province\nMainly a supply market.\n\nPettah (Colombo):\n\nWestern Province\nMainly a demand/retail market.\n\n\n\n\n\n\n\n\n\n\n\n\nPrice fluctuations in Dambulla directly affect Pettah prices due to the supply chain."
   },
   {
-    "objectID": "index.html#data",
-    "href": "index.html#data",
+    "objectID": "index.html#data-source",
+    "href": "index.html#data-source",
     "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
-    "section": "Data",
-    "text": "Data\n\n\n\nDaily price reports published by the Central Bank of Sri Lanka (CBSL)\nLink: https://www.cbsl.gov.lk/en/statistics/economic-indicators/price-report"
+    "section": "Data Source",
+    "text": "Data Source\n\nDaily price reports published by the Central Bank of Sri Lanka (CBSL)\nLink: https://www.cbsl.gov.lk/en/statistics/economic-indicators/price-report"
   },
   {
     "objectID": "index.html#a-sample-daily-price-reports",
@@ -19,5 +19,40 @@
     "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
     "section": "A Sample Daily Price Reports",
     "text": "A Sample Daily Price Reports"
+  },
+  {
+    "objectID": "index.html#r-package-for-web-scrapping-data-from-daily-reports",
+    "href": "index.html#r-package-for-web-scrapping-data-from-daily-reports",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "R package for Web Scrapping Data From Daily Reports",
+    "text": "R package for Web Scrapping Data From Daily Reports\n\n\n# install.packages(\"pak\")\npak::pak(\"thiyangt/vegscraper\")\nvegscraper::run_app()"
+  },
+  {
+    "objectID": "index.html#r-package-for-tidy-data",
+    "href": "index.html#r-package-for-tidy-data",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "R Package for Tidy Data",
+    "text": "R Package for Tidy Data\n\n\n# install.packages(\"pak\")\npak::pak(\"thiyangt/vegetablesSriLanka\")\n\nlibrary(vegetablesSriLanka)\ndata(\"vegetables.srilanka\")\nhead(vegetables.srilanka, 4)\n\n        Date  Item      Type   Market Price\n1 2016-08-01 Beans    Retail Dambulla   165\n2 2016-08-01 Beans    Retail   Pettah   160\n3 2016-08-01 Beans Wholesale Dambulla   130\n4 2016-08-01 Beans Wholesale   Pettah   140\n\ntail(vegetables.srilanka, 4)\n\n             Date   Item      Type   Market Price\n123789 2026-01-23 Tomato    Retail Dambulla   420\n123790 2026-01-23 Tomato    Retail   Pettah   350\n123791 2026-01-23 Tomato Wholesale Dambulla   390\n123792 2026-01-23 Tomato Wholesale   Pettah   300"
+  },
+  {
+    "objectID": "index.html#vegetables-included-in-the-analysis",
+    "href": "index.html#vegetables-included-in-the-analysis",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "Vegetables Included in the Analysis",
+    "text": "Vegetables Included in the Analysis\n\n\n [1] \"Beans\"             \"Big Onion (Imp)\"   \"Big Onion (Local)\"\n [4] \"Brinjal\"           \"Cabbage\"           \"Carrot\"           \n [7] \"Potato (Imp)\"      \"Potato (Local)\"    \"Pumpkin\"          \n[10] \"Red Onion (Imp)\"   \"Red Onion (Local)\" \"Tomato\"           \n[13] \"Snake gourd\"       \"Green Chilli\"      \"Lime\""
+  },
+  {
+    "objectID": "index.html#local-view-of-data",
+    "href": "index.html#local-view-of-data",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "Local View of Data",
+    "text": "Local View of Data\nhttps://thiyangt.github.io/vegetableBook/"
+  },
+  {
+    "objectID": "index.html#global-view-of-data",
+    "href": "index.html#global-view-of-data",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "Global View of Data",
+    "text": "Global View of Data"
   }
 ]
