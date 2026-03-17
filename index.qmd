@@ -175,7 +175,77 @@ p1|p2|p3
 
 -   STL-ARIMA: STL decomposition is applied to separate trend and seasonal components. Then, ARIMA is applied to the seasonally adjusted series (original series minus seasonal component) to forecast the underlying trend.
 
-## Benchmark Approaches: Forecasting Accuracy (MAPE)
+# Retrieval-Augmented Feature-Based Random Forest (RAF-RF)
+
+## RAF-RF: Package
+
+```r
+# install.packages("pak")
+pak::pak("thiyangt/vegcast")
+library(vegcast)
+```
+
+# Feature Classes and Features
+
+##
+
+:::::: columns
+::: {.column width="50%"}
+
+**Time Features**
+
+- Day, Year, Month, Week
+
+**Lag Features**
+
+- lag7, lag14, lag30, lag365
+
+**PCA Features**
+
+- First two PCs computed from lag features
+
+**Compute Past 30 window values**
+
+- Past 30 window values
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+
+**Features based on past 30 window values**
+ 
+ - Minimum, maximum, median, Q1, Q3, Standarad Deviation
+ 
+**Fourier terms**
+      
+   - `sin_week = sin(2 * pi * t / 7)`, `cos_week = cos(2 * pi * t / 7)`,
+      `sin_year = sin(2 * pi * t / 365)`, `cos_year = cos(2 * pi * t / 365)`
+:::
+::::::
+
+## Model Fitting
+
+- The following two features are duplicated in the model.
+
+- Reason: To give higher weight to these features in the model.
+
+- By doing so, I aim to signal to the model that recent observations carry more importance.
+
+
+**Lag Features**
+
+- lag7, lag14, lag30, lag365
+
+**Compute Past 30 window values**
+
+- Past 30 window values
+
+
+
+## Forecas Accuracy (MAPE)
 
 ```{r, warning=FALSE, message=FALSE}
 library(readr)
@@ -201,7 +271,7 @@ all$NAIVE <- accuracy_naive$MAPE
 all$SNAIVE <- accuracy_snaive$MAPE
 all$STLARIMA <- accuracy_stlarima$MAPE
 all$STLETS <- accuracy_stlets$MAPE
-all$RF <- mean_errors_rf$mean_MAPE
+all$RAFRF <- mean_errors_rf$mean_MAPE
 all <- all |> select(Item, Type, Market, 
                      SARIMA,
                      ETS,
@@ -209,8 +279,12 @@ all <- all |> select(Item, Type, Market,
                      SNAIVE,
                      STLARIMA,
                      STLETS, 
-                     RF)
-all |> knitr::kable()
+                     RAFRF)
+library(kableExtra)
+
+all |>
+  knitr::kable() |>
+  kable_styling(font_size = 8)
 ```
 
 ## Mean MAPE Across All Time Series
@@ -241,7 +315,7 @@ library(knitr)
 # Step 1: Pivot longer so all models are in one column
 long_fitted <- all %>%
   pivot_longer(
-    cols = SARIMA:RF, 
+    cols = SARIMA:RAFRF, 
     names_to = "Model", 
     values_to = "MAPE"
   )
@@ -255,3 +329,114 @@ best_models <- long_fitted %>%
 # Step 3: Display nicely
 best_models |> as.data.frame()
 ```
+
+## 
+
+```{r}
+features_train_pca <- features_train_pca |>
+  left_join(best_models, by =c("Item", "Type", "Market"))
+
+p4 <- ggplot(features_train_pca, aes(x = PC1, y = PC2, color = Model)) +
+  geom_point(size = 2) +
+  scale_color_brewer(palette = "Set2") +
+  theme(
+    legend.position = "bottom",
+    aspect.ratio = 1
+  ) +
+  labs(title = "Best Model", x = "PC1", y = "PC2", color = "Type") 
+
+p4
+
+```
+
+## Variable Importance (Top 40)
+
+```{r, echo=FALSE}
+# Load later
+model_rf <- readRDS("model_rf.rds")
+# Extract variable importance
+var_imp <- model_rf$variable.importance
+
+# Sort from most to least important
+var_imp_sorted <- sort(var_imp, decreasing = TRUE)
+#var_imp_sorted
+library(ggplot2)
+
+# Convert to a tidy data frame
+var_imp_df <- data.frame(
+  Variable = names(var_imp_sorted),
+  Importance = var_imp_sorted
+)
+
+top20 <- var_imp_df[1:30,]
+ggplot(top20, aes(x = reorder(Variable, Importance), y = Importance)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() + # flip for better readability
+  labs(title = "Variable Importance (Permutation)",
+       x = "Variable",
+       y = "Importance")
+```
+
+## Variable Importance (Bottom 40)
+
+```{r, echo=FALSE}
+# Load later
+model_rf <- readRDS("model_rf.rds")
+# Extract variable importance
+var_imp <- model_rf$variable.importance
+
+# Sort from most to least important
+var_imp_sorted <- sort(var_imp, decreasing = TRUE)
+#var_imp_sorted
+library(ggplot2)
+
+# Convert to a tidy data frame
+var_imp_df <- data.frame(
+  Variable = names(var_imp_sorted),
+  Importance = var_imp_sorted
+)
+
+top20 <- var_imp_df[50:90,]
+ggplot(top20, aes(x = reorder(Variable, Importance), y = Importance)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() + # flip for better readability
+  labs(title = "Variable Importance (Permutation)",
+       x = "Variable",
+       y = "Importance")
+```
+
+## Other work
+
+Another component of this project is undertaken by a BSc (Honours) Statistics undergraduate, focusing on the integration of climate variables, spatial factors, and external crisis information into the modelling framework as part of her thesis, which is expected to be submitted in May 2026.
+
+## Current Outcomes
+
+- 3 R Packages
+
+- Project website: https://thiyangt.github.io/pricecast.vegetables/
+
+- EDA book: https://thiyangt.github.io/vegetableBook/
+
+## Future work
+
+- Use of explainable methods to interpret model behaviour and understand underlying patterns
+
+- Application of cross-validation and grid search techniques for systematic parameter tuning
+
+## Future Work
+
+- Integrate the model into web app or mobile app 
+
+- Present work at ISF 2026
+
+- Manuscript writing
+
+- Work with the International Water Management Institute (IWMI) to translate research into policy and enhance knowledge sharing.
+
+## Acknowledgement
+
+Dr Priyanga Dilini Talagala
+
+Thinuri Jayarathne
+
+

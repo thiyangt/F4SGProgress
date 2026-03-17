@@ -188,6 +188,8 @@
       margin-right: 0; 
     }
   </style>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -388,36 +390,89 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <li><p>STL-ETS: STL decomposition is applied to separate trend and seasonal components. Then, ETS is applied to the seasonally adjusted series (original series minus seasonal component) to forecast the underlying trend.</p></li>
 <li><p>STL-ARIMA: STL decomposition is applied to separate trend and seasonal components. Then, ARIMA is applied to the seasonally adjusted series (original series minus seasonal component) to forecast the underlying trend.</p></li>
 </ul>
+</section></section>
+<section>
+<section id="retrieval-augmented-feature-based-random-forest-raf-rf" class="title-slide slide level1 center">
+<h1>Retrieval-Augmented Feature-Based Random Forest (RAF-RF)</h1>
+
 </section>
-<section id="benchmark-approaches-forecasting-accuracy-mape" class="slide level2">
-<h2>Benchmark Approaches: Forecasting Accuracy (MAPE)</h2>
+<section id="raf-rf-package" class="slide level2">
+<h2>RAF-RF: Package</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb10-2"><a></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thiyangt/vegcast"</span>)</span>
+<span id="cb10-3"><a></a><span class="fu">library</span>(vegcast)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section></section>
+<section>
+<section id="feature-classes-and-features" class="title-slide slide level1 center">
+<h1>Feature Classes and Features</h1>
+
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Time Features</strong></p>
+<ul>
+<li>Day, Year, Month, Week</li>
+</ul>
+<p><strong>Lag Features</strong></p>
+<ul>
+<li>lag7, lag14, lag30, lag365</li>
+</ul>
+<p><strong>PCA Features</strong></p>
+<ul>
+<li>First two PCs computed from lag features</li>
+</ul>
+<p><strong>Compute Past 30 window values</strong></p>
+<ul>
+<li>Past 30 window values</li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Features based on past 30 window values</strong></p>
+<ul>
+<li>Minimum, maximum, median, Q1, Q3, Standarad Deviation</li>
+</ul>
+<p><strong>Fourier terms</strong></p>
+<ul>
+<li><code>sin_week = sin(2 * pi * t / 7)</code>, <code>cos_week = cos(2 * pi * t / 7)</code>, <code>sin_year = sin(2 * pi * t / 365)</code>, <code>cos_year = cos(2 * pi * t / 365)</code></li>
+</ul>
+</div></div>
+</section>
+<section id="model-fitting" class="slide level2">
+<h2>Model Fitting</h2>
+<ul>
+<li><p>The following two features are duplicated in the model.</p></li>
+<li><p>Reason: To give higher weight to these features in the model.</p></li>
+<li><p>By doing so, I aim to signal to the model that recent observations carry more importance.</p></li>
+</ul>
+<p><strong>Lag Features</strong></p>
+<ul>
+<li>lag7, lag14, lag30, lag365</li>
+</ul>
+<p><strong>Compute Past 30 window values</strong></p>
+<ul>
+<li>Past 30 window values</li>
+</ul>
+</section>
+<section id="forecas-accuracy-mape" class="slide level2">
+<h2>Forecas Accuracy (MAPE)</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 9%">
-</colgroup>
+<table class="table caption-top" style="font-size: 8px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Item</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Market</th>
-<th style="text-align: right;">SARIMA</th>
-<th style="text-align: right;">ETS</th>
-<th style="text-align: right;">NAIVE</th>
-<th style="text-align: right;">SNAIVE</th>
-<th style="text-align: right;">STLARIMA</th>
-<th style="text-align: right;">STLETS</th>
-<th style="text-align: right;">RF</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Item</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Type</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Market</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SARIMA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ETS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">NAIVE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SNAIVE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">STLARIMA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">STLETS</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">RAFRF</th>
 </tr>
 </thead>
 <tbody>
@@ -1159,7 +1214,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">RF</td>
+<td style="text-align: left;">RAFRF</td>
 <td style="text-align: right;">7.374385</td>
 </tr>
 <tr class="even">
@@ -1196,68 +1251,113 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>                Item      Type   Market    Model       MAPE
-1              Beans    Retail Dambulla       RF 13.3780569
-2              Beans    Retail   Pettah       RF 14.9244720
-3              Beans Wholesale Dambulla       RF 13.8656705
-4              Beans Wholesale   Pettah       RF 20.0041266
-5    Big Onion (Imp)    Retail Dambulla       RF  8.4091505
-6    Big Onion (Imp)    Retail   Pettah       RF  4.9719384
+1              Beans    Retail Dambulla    RAFRF 13.3780569
+2              Beans    Retail   Pettah    RAFRF 14.9244720
+3              Beans Wholesale Dambulla    RAFRF 13.8656705
+4              Beans Wholesale   Pettah    RAFRF 20.0041266
+5    Big Onion (Imp)    Retail Dambulla    RAFRF  8.4091505
+6    Big Onion (Imp)    Retail   Pettah    RAFRF  4.9719384
 7    Big Onion (Imp) Wholesale Dambulla STLARIMA  8.2364109
-8    Big Onion (Imp) Wholesale   Pettah       RF  3.8026588
-9  Big Onion (Local)    Retail Dambulla       RF 10.3009319
-10 Big Onion (Local)    Retail   Pettah       RF 11.4988820
-11 Big Onion (Local) Wholesale Dambulla       RF 11.1778790
-12 Big Onion (Local) Wholesale   Pettah       RF  1.1013415
-13           Brinjal    Retail Dambulla       RF  6.1528350
-14           Brinjal    Retail   Pettah       RF  7.6712581
-15           Brinjal Wholesale Dambulla       RF  6.1286403
-16           Brinjal Wholesale   Pettah       RF  5.1085248
-17           Cabbage    Retail Dambulla       RF  9.4382661
-18           Cabbage    Retail   Pettah       RF  8.5394541
+8    Big Onion (Imp) Wholesale   Pettah    RAFRF  3.8026588
+9  Big Onion (Local)    Retail Dambulla    RAFRF 10.3009319
+10 Big Onion (Local)    Retail   Pettah    RAFRF 11.4988820
+11 Big Onion (Local) Wholesale Dambulla    RAFRF 11.1778790
+12 Big Onion (Local) Wholesale   Pettah    RAFRF  1.1013415
+13           Brinjal    Retail Dambulla    RAFRF  6.1528350
+14           Brinjal    Retail   Pettah    RAFRF  7.6712581
+15           Brinjal Wholesale Dambulla    RAFRF  6.1286403
+16           Brinjal Wholesale   Pettah    RAFRF  5.1085248
+17           Cabbage    Retail Dambulla    RAFRF  9.4382661
+18           Cabbage    Retail   Pettah    RAFRF  8.5394541
 19           Cabbage Wholesale Dambulla STLARIMA  9.8366877
-20           Cabbage Wholesale   Pettah       RF 10.1142547
-21            Carrot    Retail Dambulla       RF  5.1534030
-22            Carrot    Retail   Pettah       RF  5.1414531
-23            Carrot Wholesale Dambulla       RF  5.9857797
-24            Carrot Wholesale   Pettah       RF  6.9668724
-25      Green Chilli    Retail Dambulla       RF 10.6370504
-26      Green Chilli    Retail   Pettah       RF  4.1694981
-27      Green Chilli Wholesale Dambulla       RF 12.2895560
-28      Green Chilli Wholesale   Pettah       RF  4.6160258
-29              Lime    Retail Dambulla       RF 14.0840209
-30              Lime    Retail   Pettah       RF 13.2237936
-31              Lime Wholesale Dambulla       RF 14.0927047
-32              Lime Wholesale   Pettah       RF 13.9879802
-33      Potato (Imp)    Retail Dambulla       RF  7.2890298
-34      Potato (Imp)    Retail   Pettah       RF  5.3252370
-35      Potato (Imp) Wholesale Dambulla       RF  9.8133343
+20           Cabbage Wholesale   Pettah    RAFRF 10.1142547
+21            Carrot    Retail Dambulla    RAFRF  5.1534030
+22            Carrot    Retail   Pettah    RAFRF  5.1414531
+23            Carrot Wholesale Dambulla    RAFRF  5.9857797
+24            Carrot Wholesale   Pettah    RAFRF  6.9668724
+25      Green Chilli    Retail Dambulla    RAFRF 10.6370504
+26      Green Chilli    Retail   Pettah    RAFRF  4.1694981
+27      Green Chilli Wholesale Dambulla    RAFRF 12.2895560
+28      Green Chilli Wholesale   Pettah    RAFRF  4.6160258
+29              Lime    Retail Dambulla    RAFRF 14.0840209
+30              Lime    Retail   Pettah    RAFRF 13.2237936
+31              Lime Wholesale Dambulla    RAFRF 14.0927047
+32              Lime Wholesale   Pettah    RAFRF 13.9879802
+33      Potato (Imp)    Retail Dambulla    RAFRF  7.2890298
+34      Potato (Imp)    Retail   Pettah    RAFRF  5.3252370
+35      Potato (Imp) Wholesale Dambulla    RAFRF  9.8133343
 36      Potato (Imp) Wholesale   Pettah      ETS  4.6246943
-37    Potato (Local)    Retail Dambulla       RF  5.3949430
-38    Potato (Local)    Retail   Pettah       RF  0.4743834
-39    Potato (Local) Wholesale Dambulla       RF  5.8581112
-40    Potato (Local) Wholesale   Pettah       RF  1.7100726
-41           Pumpkin    Retail Dambulla       RF  5.4932818
-42           Pumpkin    Retail   Pettah       RF  3.1087467
-43           Pumpkin Wholesale Dambulla       RF  6.0075360
-44           Pumpkin Wholesale   Pettah       RF  4.0850503
+37    Potato (Local)    Retail Dambulla    RAFRF  5.3949430
+38    Potato (Local)    Retail   Pettah    RAFRF  0.4743834
+39    Potato (Local) Wholesale Dambulla    RAFRF  5.8581112
+40    Potato (Local) Wholesale   Pettah    RAFRF  1.7100726
+41           Pumpkin    Retail Dambulla    RAFRF  5.4932818
+42           Pumpkin    Retail   Pettah    RAFRF  3.1087467
+43           Pumpkin Wholesale Dambulla    RAFRF  6.0075360
+44           Pumpkin Wholesale   Pettah    RAFRF  4.0850503
 45   Red Onion (Imp)    Retail Dambulla   STLETS  6.9560621
 46   Red Onion (Imp)    Retail   Pettah    NAIVE  0.0000000
 47   Red Onion (Imp) Wholesale Dambulla   STLETS  7.6068916
 48   Red Onion (Imp) Wholesale   Pettah      ETS  2.0123774
-49 Red Onion (Local)    Retail Dambulla       RF  6.7817678
-50 Red Onion (Local)    Retail   Pettah       RF  3.8198239
-51 Red Onion (Local) Wholesale Dambulla       RF  7.4365016
-52 Red Onion (Local) Wholesale   Pettah       RF  4.6338040
-53       Snake gourd    Retail Dambulla       RF  2.8394530
-54       Snake gourd    Retail   Pettah       RF  1.1105003
-55       Snake gourd Wholesale Dambulla       RF  2.7396826
-56       Snake gourd Wholesale   Pettah       RF  1.8254091
-57            Tomato    Retail Dambulla       RF  6.9472005
-58            Tomato    Retail   Pettah       RF  2.6589798
-59            Tomato Wholesale Dambulla       RF 10.3806341
-60            Tomato Wholesale   Pettah       RF  4.9414481</code></pre>
+49 Red Onion (Local)    Retail Dambulla    RAFRF  6.7817678
+50 Red Onion (Local)    Retail   Pettah    RAFRF  3.8198239
+51 Red Onion (Local) Wholesale Dambulla    RAFRF  7.4365016
+52 Red Onion (Local) Wholesale   Pettah    RAFRF  4.6338040
+53       Snake gourd    Retail Dambulla    RAFRF  2.8394530
+54       Snake gourd    Retail   Pettah    RAFRF  1.1105003
+55       Snake gourd Wholesale Dambulla    RAFRF  2.7396826
+56       Snake gourd Wholesale   Pettah    RAFRF  1.8254091
+57            Tomato    Retail Dambulla    RAFRF  6.9472005
+58            Tomato    Retail   Pettah    RAFRF  2.6589798
+59            Tomato Wholesale Dambulla    RAFRF 10.3806341
+60            Tomato Wholesale   Pettah    RAFRF  4.9414481</code></pre>
 </div>
 </div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="variable-importance-top-40" class="slide level2">
+<h2>Variable Importance (Top 40)</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="variable-importance-bottom-40" class="slide level2">
+<h2>Variable Importance (Bottom 40)</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="other-work" class="slide level2">
+<h2>Other work</h2>
+<p>Another component of this project is undertaken by a BSc (Honours) Statistics undergraduate, focusing on the integration of climate variables, spatial factors, and external crisis information into the modelling framework as part of her thesis, which is expected to be submitted in May 2026.</p>
+</section>
+<section id="current-outcomes" class="slide level2">
+<h2>Current Outcomes</h2>
+<ul>
+<li><p>3 R Packages</p></li>
+<li><p>Project website: https://thiyangt.github.io/pricecast.vegetables/</p></li>
+<li><p>EDA book: https://thiyangt.github.io/vegetableBook/</p></li>
+</ul>
+</section>
+<section id="future-work" class="slide level2">
+<h2>Future work</h2>
+<ul>
+<li><p>Use of explainable methods to interpret model behaviour and understand underlying patterns</p></li>
+<li><p>Application of cross-validation and grid search techniques for systematic parameter tuning</p></li>
+</ul>
+</section>
+<section id="future-work-1" class="slide level2">
+<h2>Future Work</h2>
+<ul>
+<li><p>Integrate the model into web app or mobile app</p></li>
+<li><p>Present work at ISF 2026</p></li>
+<li><p>Manuscript writing</p></li>
+<li><p>Work with the International Water Management Institute (IWMI) to translate research into policy and enhance knowledge sharing.</p></li>
+</ul>
+</section>
+<section id="acknowledgement" class="slide level2">
+<h2>Acknowledgement</h2>
+<p>Dr Priyanga Dilini Talagala</p>
+<p>Thinuri Jayarathne</p>
 
 
 </section></section>
