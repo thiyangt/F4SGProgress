@@ -405,6 +405,10 @@ ggplot(top20, aes(x = reorder(Variable, Importance), y = Importance)) +
        y = "Importance")
 ```
 
+## Importance of this model
+
+
+
 ## Other work
 
 Another component of this project is undertaken by a BSc (Honours) Statistics undergraduate, focusing on the integration of climate variables, spatial factors, and external crisis information into the modelling framework as part of her thesis, which is expected to be submitted in May 2026.
@@ -416,6 +420,18 @@ Another component of this project is undertaken by a BSc (Honours) Statistics un
 - Project website: https://thiyangt.github.io/pricecast.vegetables/
 
 - EDA book: https://thiyangt.github.io/vegetableBook/
+
+## Our method
+
+- Improves predictive accuracy with retrieval-augmented features
+
+- Highlights the importance of recent observations
+
+- Provides interpretable insights for decision-making
+
+- Easy to train
+
+- More practical and explainable than deep neural networks
 
 ## Future work
 
@@ -440,3 +456,4 @@ Dr Priyanga Dilini Talagala
 Thinuri Jayarathne
 
 
+Contact: ttalagala@sjp.ac.lk

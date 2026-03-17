@@ -126,6 +126,13 @@
     "text": "Variable Importance (Bottom 40)"
   },
   {
+    "objectID": "index.html#importance-of-this-model",
+    "href": "index.html#importance-of-this-model",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "Importance of this model",
+    "text": "Importance of this model"
+  },
+  {
     "objectID": "index.html#other-work",
     "href": "index.html#other-work",
     "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
@@ -138,6 +145,13 @@
     "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
     "section": "Current Outcomes",
     "text": "Current Outcomes\n\n3 R Packages\nProject website: https://thiyangt.github.io/pricecast.vegetables/\nEDA book: https://thiyangt.github.io/vegetableBook/"
+  },
+  {
+    "objectID": "index.html#our-method",
+    "href": "index.html#our-method",
+    "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
+    "section": "Our method",
+    "text": "Our method\n\nImproves predictive accuracy with retrieval-augmented features\nHighlights the importance of recent observations\nProvides interpretable insights for decision-making\nEasy to train\nMore practical and explainable than deep neural networks"
   },
   {
     "objectID": "index.html#future-work",
@@ -158,6 +172,6 @@
     "href": "index.html#acknowledgement",
     "title": "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka",
     "section": "Acknowledgement",
-    "text": "Acknowledgement\nDr Priyanga Dilini Talagala\nThinuri Jayarathne"
+    "text": "Acknowledgement\nDr Priyanga Dilini Talagala\nThinuri Jayarathne\nContact: ttalagala@sjp.ac.lk"
   }
 ]
