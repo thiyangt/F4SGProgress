@@ -8,39 +8,63 @@ editor: visual
 
 # Introduction
 
-##
+## 
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
 **Key Economic Centres for Vegetables in Sri Lanka:**
 
+Dambulla:
 
+-   Central Province
 
-Dambulla: 
+-   Mainly a supply market.
 
-  - Central Province
-  
-  - Mainly a supply market.
+Pettah (Colombo):
 
-Pettah (Colombo): 
+-   Western Province
 
-  - Western Province
-  
-  - Mainly a demand/retail market.
-  
+-   Mainly a demand/retail market.
 :::
 
 ::: {.column width="50%"}
-
 ```{r, out.width="100%"}
 knitr::include_graphics("map.png")
 ```
 
+-   Price fluctuations in Dambulla directly affect Pettah prices due to the supply chain.
+:::
+:::::
 
+## Data
 
-- Price fluctuations in Dambulla directly affect Pettah prices due to the supply chain.
+:::: {.columns}
+
+::: {.column width="50%"}
+- Daily price reports published by the Central Bank of Sri Lanka (CBSL)
+
+- Link: https://www.cbsl.gov.lk/en/statistics/economic-indicators/price-report
+:::
+
+::: {.column width="30%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="20%"}
+
+```{r, out.height="100%", fig.align='right'}
+knitr::include_graphics("dailyreports.png")
+```
 
 :::
 
 ::::
+
+## A Sample Daily Price Reports {.allowframebreaks}
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("dr.png")
+```
+
+
+
