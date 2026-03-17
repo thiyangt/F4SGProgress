@@ -393,16 +393,17 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <h2>Benchmark Approaches: Forecasting Accuracy (MAPE)</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top" style="width:100%;">
+<table class="caption-top">
 <colgroup>
-<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
 <col style="width: 9%">
 <col style="width: 8%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 9%">
+<col style="width: 8%">
 <col style="width: 9%">
 </colgroup>
 <thead>
@@ -416,6 +417,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <th style="text-align: right;">SNAIVE</th>
 <th style="text-align: right;">STLARIMA</th>
 <th style="text-align: right;">STLETS</th>
+<th style="text-align: right;">RF</th>
 </tr>
 </thead>
 <tbody>
@@ -429,6 +431,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">108.436468</td>
 <td style="text-align: right;">23.649829</td>
 <td style="text-align: right;">53.713437</td>
+<td style="text-align: right;">13.3780569</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Beans</td>
@@ -440,6 +443,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">81.140805</td>
 <td style="text-align: right;">37.660222</td>
 <td style="text-align: right;">48.648647</td>
+<td style="text-align: right;">14.9244720</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Beans</td>
@@ -451,6 +455,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">116.552732</td>
 <td style="text-align: right;">23.225807</td>
 <td style="text-align: right;">51.335005</td>
+<td style="text-align: right;">13.8656705</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Beans</td>
@@ -462,6 +467,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">91.288138</td>
 <td style="text-align: right;">26.843587</td>
 <td style="text-align: right;">57.734725</td>
+<td style="text-align: right;">20.0041266</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Big Onion (Imp)</td>
@@ -473,6 +479,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">13.382049</td>
 <td style="text-align: right;">9.425726</td>
 <td style="text-align: right;">16.724839</td>
+<td style="text-align: right;">8.4091505</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Big Onion (Imp)</td>
@@ -484,6 +491,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">23.287175</td>
 <td style="text-align: right;">10.950574</td>
 <td style="text-align: right;">28.910345</td>
+<td style="text-align: right;">4.9719384</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Big Onion (Imp)</td>
@@ -495,6 +503,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">15.305864</td>
 <td style="text-align: right;">8.236411</td>
 <td style="text-align: right;">19.437876</td>
+<td style="text-align: right;">9.6829104</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Big Onion (Imp)</td>
@@ -506,6 +515,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">22.694613</td>
 <td style="text-align: right;">16.095898</td>
 <td style="text-align: right;">25.134425</td>
+<td style="text-align: right;">3.8026588</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Brinjal</td>
@@ -517,6 +527,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">101.565071</td>
 <td style="text-align: right;">36.934560</td>
 <td style="text-align: right;">76.665585</td>
+<td style="text-align: right;">6.1528350</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Brinjal</td>
@@ -528,6 +539,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">76.472294</td>
 <td style="text-align: right;">22.097211</td>
 <td style="text-align: right;">18.727430</td>
+<td style="text-align: right;">7.6712581</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Brinjal</td>
@@ -539,6 +551,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">116.137951</td>
 <td style="text-align: right;">43.135470</td>
 <td style="text-align: right;">87.687166</td>
+<td style="text-align: right;">6.1286403</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Brinjal</td>
@@ -550,6 +563,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">98.215320</td>
 <td style="text-align: right;">32.283265</td>
 <td style="text-align: right;">28.119516</td>
+<td style="text-align: right;">5.1085248</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Cabbage</td>
@@ -561,6 +575,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">19.122391</td>
 <td style="text-align: right;">10.384040</td>
 <td style="text-align: right;">18.480996</td>
+<td style="text-align: right;">9.4382661</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Cabbage</td>
@@ -572,6 +587,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">21.210391</td>
 <td style="text-align: right;">9.660370</td>
 <td style="text-align: right;">20.503819</td>
+<td style="text-align: right;">8.5394541</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Cabbage</td>
@@ -583,6 +599,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">22.325050</td>
 <td style="text-align: right;">9.836688</td>
 <td style="text-align: right;">17.494443</td>
+<td style="text-align: right;">11.8111279</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Cabbage</td>
@@ -594,6 +611,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">26.366215</td>
 <td style="text-align: right;">17.653159</td>
 <td style="text-align: right;">25.179517</td>
+<td style="text-align: right;">10.1142547</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Carrot</td>
@@ -605,6 +623,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">31.024097</td>
 <td style="text-align: right;">24.643254</td>
 <td style="text-align: right;">21.850341</td>
+<td style="text-align: right;">5.1534030</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Carrot</td>
@@ -616,6 +635,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">27.962167</td>
 <td style="text-align: right;">18.095422</td>
 <td style="text-align: right;">16.648450</td>
+<td style="text-align: right;">5.1414531</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Carrot</td>
@@ -627,6 +647,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">33.954717</td>
 <td style="text-align: right;">24.535849</td>
 <td style="text-align: right;">23.814921</td>
+<td style="text-align: right;">5.9857797</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Carrot</td>
@@ -638,6 +659,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">32.137238</td>
 <td style="text-align: right;">20.809287</td>
 <td style="text-align: right;">19.457926</td>
+<td style="text-align: right;">6.9668724</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Green Chilli</td>
@@ -649,6 +671,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">78.191909</td>
 <td style="text-align: right;">17.588434</td>
 <td style="text-align: right;">41.893727</td>
+<td style="text-align: right;">10.6370504</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Green Chilli</td>
@@ -660,6 +683,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">71.781884</td>
 <td style="text-align: right;">19.139696</td>
 <td style="text-align: right;">24.740258</td>
+<td style="text-align: right;">4.1694981</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Green Chilli</td>
@@ -671,6 +695,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">82.374483</td>
 <td style="text-align: right;">18.760405</td>
 <td style="text-align: right;">44.937231</td>
+<td style="text-align: right;">12.2895560</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Green Chilli</td>
@@ -682,6 +707,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">79.869439</td>
 <td style="text-align: right;">22.096612</td>
 <td style="text-align: right;">29.480087</td>
+<td style="text-align: right;">4.6160258</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Lime</td>
@@ -693,6 +719,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">34.016362</td>
 <td style="text-align: right;">30.269743</td>
 <td style="text-align: right;">49.238757</td>
+<td style="text-align: right;">14.0840209</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lime</td>
@@ -704,6 +731,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">16.086956</td>
 <td style="text-align: right;">41.173294</td>
 <td style="text-align: right;">18.887781</td>
+<td style="text-align: right;">13.2237936</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Lime</td>
@@ -715,6 +743,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">43.827395</td>
 <td style="text-align: right;">44.304577</td>
 <td style="text-align: right;">64.577964</td>
+<td style="text-align: right;">14.0927047</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lime</td>
@@ -726,6 +755,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">25.010979</td>
 <td style="text-align: right;">69.407686</td>
 <td style="text-align: right;">30.324372</td>
+<td style="text-align: right;">13.9879802</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Potato (Imp)</td>
@@ -737,6 +767,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">13.131801</td>
 <td style="text-align: right;">9.142112</td>
 <td style="text-align: right;">8.880905</td>
+<td style="text-align: right;">7.2890298</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Potato (Imp)</td>
@@ -748,6 +779,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">7.065461</td>
 <td style="text-align: right;">6.022379</td>
 <td style="text-align: right;">5.570961</td>
+<td style="text-align: right;">5.3252370</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Potato (Imp)</td>
@@ -759,6 +791,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">15.519996</td>
 <td style="text-align: right;">10.500549</td>
 <td style="text-align: right;">11.317743</td>
+<td style="text-align: right;">9.8133343</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Potato (Imp)</td>
@@ -770,6 +803,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">5.464367</td>
 <td style="text-align: right;">10.807832</td>
 <td style="text-align: right;">6.378922</td>
+<td style="text-align: right;">5.9710575</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pumpkin</td>
@@ -781,6 +815,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">16.227068</td>
 <td style="text-align: right;">14.781445</td>
 <td style="text-align: right;">18.503533</td>
+<td style="text-align: right;">5.4932818</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Pumpkin</td>
@@ -792,6 +827,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">9.054659</td>
 <td style="text-align: right;">12.318928</td>
 <td style="text-align: right;">12.623855</td>
+<td style="text-align: right;">3.1087467</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Pumpkin</td>
@@ -803,6 +839,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">21.364714</td>
 <td style="text-align: right;">19.655367</td>
 <td style="text-align: right;">24.870564</td>
+<td style="text-align: right;">6.0075360</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Pumpkin</td>
@@ -814,6 +851,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">8.349042</td>
 <td style="text-align: right;">14.051518</td>
 <td style="text-align: right;">14.668574</td>
+<td style="text-align: right;">4.0850503</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Snake gourd</td>
@@ -825,6 +863,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">29.208316</td>
 <td style="text-align: right;">13.941379</td>
 <td style="text-align: right;">14.164772</td>
+<td style="text-align: right;">2.8394530</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Snake gourd</td>
@@ -836,6 +875,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">67.437867</td>
 <td style="text-align: right;">45.482821</td>
 <td style="text-align: right;">59.286022</td>
+<td style="text-align: right;">1.1105003</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Snake gourd</td>
@@ -847,6 +887,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">32.533800</td>
 <td style="text-align: right;">14.255837</td>
 <td style="text-align: right;">15.622499</td>
+<td style="text-align: right;">2.7396826</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Snake gourd</td>
@@ -858,6 +899,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">79.704174</td>
 <td style="text-align: right;">55.667646</td>
 <td style="text-align: right;">69.277871</td>
+<td style="text-align: right;">1.8254091</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Tomato</td>
@@ -869,6 +911,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">21.189663</td>
 <td style="text-align: right;">14.442377</td>
 <td style="text-align: right;">18.904901</td>
+<td style="text-align: right;">6.9472005</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Tomato</td>
@@ -880,6 +923,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">25.764048</td>
 <td style="text-align: right;">20.394775</td>
 <td style="text-align: right;">27.309844</td>
+<td style="text-align: right;">2.6589798</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Tomato</td>
@@ -891,6 +935,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">22.962383</td>
 <td style="text-align: right;">15.365411</td>
 <td style="text-align: right;">20.184039</td>
+<td style="text-align: right;">10.3806341</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Tomato</td>
@@ -902,6 +947,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">28.435891</td>
 <td style="text-align: right;">21.699160</td>
 <td style="text-align: right;">32.642905</td>
+<td style="text-align: right;">4.9414481</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Potato (Local)</td>
@@ -913,6 +959,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">17.061942</td>
 <td style="text-align: right;">18.674147</td>
 <td style="text-align: right;">12.473323</td>
+<td style="text-align: right;">5.3949430</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Potato (Local)</td>
@@ -924,6 +971,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">4.918991</td>
 <td style="text-align: right;">4.653313</td>
 <td style="text-align: right;">4.941352</td>
+<td style="text-align: right;">0.4743834</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Potato (Local)</td>
@@ -935,6 +983,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">18.163302</td>
 <td style="text-align: right;">19.488281</td>
 <td style="text-align: right;">13.028638</td>
+<td style="text-align: right;">5.8581112</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Potato (Local)</td>
@@ -946,6 +995,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">13.461594</td>
 <td style="text-align: right;">18.185112</td>
 <td style="text-align: right;">16.538383</td>
+<td style="text-align: right;">1.7100726</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Big Onion (Local)</td>
@@ -957,6 +1007,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">17.520916</td>
 <td style="text-align: right;">14.179103</td>
 <td style="text-align: right;">14.204758</td>
+<td style="text-align: right;">10.3009319</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Big Onion (Local)</td>
@@ -968,6 +1019,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">67.544350</td>
 <td style="text-align: right;">54.976663</td>
 <td style="text-align: right;">48.481253</td>
+<td style="text-align: right;">11.4988820</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Big Onion (Local)</td>
@@ -979,6 +1031,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">19.562965</td>
 <td style="text-align: right;">16.531702</td>
 <td style="text-align: right;">16.829201</td>
+<td style="text-align: right;">11.1778790</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Big Onion (Local)</td>
@@ -990,6 +1043,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">41.677143</td>
 <td style="text-align: right;">30.971563</td>
 <td style="text-align: right;">27.687909</td>
+<td style="text-align: right;">1.1013415</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Red Onion (Imp)</td>
@@ -1001,6 +1055,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">7.613194</td>
 <td style="text-align: right;">10.453624</td>
 <td style="text-align: right;">6.956062</td>
+<td style="text-align: right;">7.6402573</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Red Onion (Imp)</td>
@@ -1012,6 +1067,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">1.242236</td>
 <td style="text-align: right;">7.067998</td>
 <td style="text-align: right;">2.744728</td>
+<td style="text-align: right;">4.5580784</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Red Onion (Imp)</td>
@@ -1023,6 +1079,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">8.124297</td>
 <td style="text-align: right;">9.903692</td>
 <td style="text-align: right;">7.606892</td>
+<td style="text-align: right;">8.0676269</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Red Onion (Imp)</td>
@@ -1034,6 +1091,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">4.000545</td>
 <td style="text-align: right;">7.352265</td>
 <td style="text-align: right;">14.537448</td>
+<td style="text-align: right;">7.1206462</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Red Onion (Local)</td>
@@ -1045,6 +1103,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">17.347105</td>
 <td style="text-align: right;">17.382001</td>
 <td style="text-align: right;">15.118431</td>
+<td style="text-align: right;">6.7817678</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Red Onion (Local)</td>
@@ -1056,6 +1115,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">65.351219</td>
 <td style="text-align: right;">70.625670</td>
 <td style="text-align: right;">63.937379</td>
+<td style="text-align: right;">3.8198239</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Red Onion (Local)</td>
@@ -1067,6 +1127,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">19.256892</td>
 <td style="text-align: right;">19.106399</td>
 <td style="text-align: right;">17.046904</td>
+<td style="text-align: right;">7.4365016</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Red Onion (Local)</td>
@@ -1078,6 +1139,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <td style="text-align: right;">18.619037</td>
 <td style="text-align: right;">8.154449</td>
 <td style="text-align: right;">5.413868</td>
+<td style="text-align: right;">4.6338040</td>
 </tr>
 </tbody>
 </table>
@@ -1097,28 +1159,32 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">RF</td>
+<td style="text-align: right;">7.374385</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">STLARIMA</td>
-<td style="text-align: right;">21.91888</td>
+<td style="text-align: right;">21.918876</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">STLETS</td>
-<td style="text-align: right;">27.13507</td>
+<td style="text-align: right;">27.135067</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NAIVE</td>
-<td style="text-align: right;">30.31381</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SARIMA</td>
-<td style="text-align: right;">30.32647</td>
+<td style="text-align: right;">30.313811</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">ETS</td>
-<td style="text-align: right;">31.11081</td>
+<td style="text-align: left;">SARIMA</td>
+<td style="text-align: right;">30.326473</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">ETS</td>
+<td style="text-align: right;">31.110813</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">SNAIVE</td>
-<td style="text-align: right;">37.57699</td>
+<td style="text-align: right;">37.576985</td>
 </tr>
 </tbody>
 </table>
@@ -1129,67 +1195,67 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <h2>Best Method for Each Series</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>                Item      Type   Market    Model      MAPE
-1              Beans    Retail Dambulla STLARIMA 23.649829
-2              Beans    Retail   Pettah STLARIMA 37.660222
-3              Beans Wholesale Dambulla STLARIMA 23.225807
-4              Beans Wholesale   Pettah STLARIMA 26.843587
-5    Big Onion (Imp)    Retail Dambulla STLARIMA  9.425726
-6    Big Onion (Imp)    Retail   Pettah STLARIMA 10.950574
-7    Big Onion (Imp) Wholesale Dambulla STLARIMA  8.236411
-8    Big Onion (Imp) Wholesale   Pettah STLARIMA 16.095898
-9  Big Onion (Local)    Retail Dambulla STLARIMA 14.179103
-10 Big Onion (Local)    Retail   Pettah   STLETS 48.481253
-11 Big Onion (Local) Wholesale Dambulla STLARIMA 16.531701
-12 Big Onion (Local) Wholesale   Pettah   STLETS 27.687909
-13           Brinjal    Retail Dambulla STLARIMA 36.934560
-14           Brinjal    Retail   Pettah   STLETS 18.727430
-15           Brinjal Wholesale Dambulla STLARIMA 43.135470
-16           Brinjal Wholesale   Pettah   STLETS 28.119516
-17           Cabbage    Retail Dambulla STLARIMA 10.384040
-18           Cabbage    Retail   Pettah STLARIMA  9.660370
-19           Cabbage Wholesale Dambulla STLARIMA  9.836688
-20           Cabbage Wholesale   Pettah STLARIMA 17.653159
-21            Carrot    Retail Dambulla   STLETS 21.850341
-22            Carrot    Retail   Pettah   STLETS 16.648450
-23            Carrot Wholesale Dambulla   STLETS 23.814921
-24            Carrot Wholesale   Pettah   STLETS 19.457926
-25      Green Chilli    Retail Dambulla STLARIMA 17.588434
-26      Green Chilli    Retail   Pettah STLARIMA 19.139696
-27      Green Chilli Wholesale Dambulla STLARIMA 18.760405
-28      Green Chilli Wholesale   Pettah STLARIMA 22.096612
-29              Lime    Retail Dambulla STLARIMA 30.269743
-30              Lime    Retail   Pettah      ETS 14.009662
-31              Lime Wholesale Dambulla   SNAIVE 43.827395
-32              Lime Wholesale   Pettah    NAIVE 22.178305
-33      Potato (Imp)    Retail Dambulla   STLETS  8.880905
-34      Potato (Imp)    Retail   Pettah   STLETS  5.570961
-35      Potato (Imp) Wholesale Dambulla STLARIMA 10.500549
-36      Potato (Imp) Wholesale   Pettah      ETS  4.624694
-37    Potato (Local)    Retail Dambulla      ETS  9.489494
-38    Potato (Local)    Retail   Pettah STLARIMA  4.653313
-39    Potato (Local) Wholesale Dambulla      ETS 11.546640
-40    Potato (Local) Wholesale   Pettah   SARIMA 12.459535
-41           Pumpkin    Retail Dambulla    NAIVE 13.612349
-42           Pumpkin    Retail   Pettah    NAIVE  8.511181
-43           Pumpkin Wholesale Dambulla   SARIMA 18.407489
-44           Pumpkin Wholesale   Pettah   SNAIVE  8.349042
-45   Red Onion (Imp)    Retail Dambulla   STLETS  6.956062
-46   Red Onion (Imp)    Retail   Pettah    NAIVE  0.000000
-47   Red Onion (Imp) Wholesale Dambulla   STLETS  7.606892
-48   Red Onion (Imp) Wholesale   Pettah      ETS  2.012377
-49 Red Onion (Local)    Retail Dambulla   STLETS 15.118431
-50 Red Onion (Local)    Retail   Pettah   SARIMA 63.000210
-51 Red Onion (Local) Wholesale Dambulla   STLETS 17.046904
-52 Red Onion (Local) Wholesale   Pettah   STLETS  5.413868
-53       Snake gourd    Retail Dambulla    NAIVE 10.894863
-54       Snake gourd    Retail   Pettah STLARIMA 45.482821
-55       Snake gourd Wholesale Dambulla    NAIVE 11.392231
-56       Snake gourd Wholesale   Pettah STLARIMA 55.667647
-57            Tomato    Retail Dambulla      ETS 11.816832
-58            Tomato    Retail   Pettah      ETS 13.845590
-59            Tomato Wholesale Dambulla      ETS 12.555720
-60            Tomato Wholesale   Pettah      ETS 15.108691</code></pre>
+<pre><code>                Item      Type   Market    Model       MAPE
+1              Beans    Retail Dambulla       RF 13.3780569
+2              Beans    Retail   Pettah       RF 14.9244720
+3              Beans Wholesale Dambulla       RF 13.8656705
+4              Beans Wholesale   Pettah       RF 20.0041266
+5    Big Onion (Imp)    Retail Dambulla       RF  8.4091505
+6    Big Onion (Imp)    Retail   Pettah       RF  4.9719384
+7    Big Onion (Imp) Wholesale Dambulla STLARIMA  8.2364109
+8    Big Onion (Imp) Wholesale   Pettah       RF  3.8026588
+9  Big Onion (Local)    Retail Dambulla       RF 10.3009319
+10 Big Onion (Local)    Retail   Pettah       RF 11.4988820
+11 Big Onion (Local) Wholesale Dambulla       RF 11.1778790
+12 Big Onion (Local) Wholesale   Pettah       RF  1.1013415
+13           Brinjal    Retail Dambulla       RF  6.1528350
+14           Brinjal    Retail   Pettah       RF  7.6712581
+15           Brinjal Wholesale Dambulla       RF  6.1286403
+16           Brinjal Wholesale   Pettah       RF  5.1085248
+17           Cabbage    Retail Dambulla       RF  9.4382661
+18           Cabbage    Retail   Pettah       RF  8.5394541
+19           Cabbage Wholesale Dambulla STLARIMA  9.8366877
+20           Cabbage Wholesale   Pettah       RF 10.1142547
+21            Carrot    Retail Dambulla       RF  5.1534030
+22            Carrot    Retail   Pettah       RF  5.1414531
+23            Carrot Wholesale Dambulla       RF  5.9857797
+24            Carrot Wholesale   Pettah       RF  6.9668724
+25      Green Chilli    Retail Dambulla       RF 10.6370504
+26      Green Chilli    Retail   Pettah       RF  4.1694981
+27      Green Chilli Wholesale Dambulla       RF 12.2895560
+28      Green Chilli Wholesale   Pettah       RF  4.6160258
+29              Lime    Retail Dambulla       RF 14.0840209
+30              Lime    Retail   Pettah       RF 13.2237936
+31              Lime Wholesale Dambulla       RF 14.0927047
+32              Lime Wholesale   Pettah       RF 13.9879802
+33      Potato (Imp)    Retail Dambulla       RF  7.2890298
+34      Potato (Imp)    Retail   Pettah       RF  5.3252370
+35      Potato (Imp) Wholesale Dambulla       RF  9.8133343
+36      Potato (Imp) Wholesale   Pettah      ETS  4.6246943
+37    Potato (Local)    Retail Dambulla       RF  5.3949430
+38    Potato (Local)    Retail   Pettah       RF  0.4743834
+39    Potato (Local) Wholesale Dambulla       RF  5.8581112
+40    Potato (Local) Wholesale   Pettah       RF  1.7100726
+41           Pumpkin    Retail Dambulla       RF  5.4932818
+42           Pumpkin    Retail   Pettah       RF  3.1087467
+43           Pumpkin Wholesale Dambulla       RF  6.0075360
+44           Pumpkin Wholesale   Pettah       RF  4.0850503
+45   Red Onion (Imp)    Retail Dambulla   STLETS  6.9560621
+46   Red Onion (Imp)    Retail   Pettah    NAIVE  0.0000000
+47   Red Onion (Imp) Wholesale Dambulla   STLETS  7.6068916
+48   Red Onion (Imp) Wholesale   Pettah      ETS  2.0123774
+49 Red Onion (Local)    Retail Dambulla       RF  6.7817678
+50 Red Onion (Local)    Retail   Pettah       RF  3.8198239
+51 Red Onion (Local) Wholesale Dambulla       RF  7.4365016
+52 Red Onion (Local) Wholesale   Pettah       RF  4.6338040
+53       Snake gourd    Retail Dambulla       RF  2.8394530
+54       Snake gourd    Retail   Pettah       RF  1.1105003
+55       Snake gourd Wholesale Dambulla       RF  2.7396826
+56       Snake gourd Wholesale   Pettah       RF  1.8254091
+57            Tomato    Retail Dambulla       RF  6.9472005
+58            Tomato    Retail   Pettah       RF  2.6589798
+59            Tomato Wholesale Dambulla       RF 10.3806341
+60            Tomato Wholesale   Pettah       RF  4.9414481</code></pre>
 </div>
 </div>
 
