@@ -38,12 +38,11 @@ knitr::include_graphics("map.png")
 
 ## Data
 
-:::: {.columns}
-
+:::::: columns
 ::: {.column width="50%"}
-- Daily price reports published by the Central Bank of Sri Lanka (CBSL)
+-   Daily price reports published by the Central Bank of Sri Lanka (CBSL)
 
-- Link: https://www.cbsl.gov.lk/en/statistics/economic-indicators/price-report
+-   Link: https://www.cbsl.gov.lk/en/statistics/economic-indicators/price-report
 :::
 
 ::: {.column width="30%"}
@@ -51,20 +50,14 @@ knitr::include_graphics("map.png")
 :::
 
 ::: {.column width="20%"}
-
 ```{r, out.height="100%", fig.align='right'}
 knitr::include_graphics("dailyreports.png")
 ```
-
 :::
-
-::::
+::::::
 
 ## A Sample Daily Price Reports {.allowframebreaks}
 
 ```{r, echo=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("dr.png")
 ```
-
-
-
