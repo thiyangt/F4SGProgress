@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.42">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Thiyanga S. Talagala   Department of Statistics,   Faculty of Applied Sciences,   University of Sri Jayewardenepura, Sri Lanka">
   <title>F4SG-Midway Review – Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka</title>
@@ -29,8 +29,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -41,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -94,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -264,9 +265,9 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <h2>R package for Web Scrapping Data From Daily Reports</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("pak")</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("pak")</span></span>
 <span id="cb1-2"><a></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thiyangt/vegscraper"</span>)</span>
-<span id="cb1-3"><a></a>vegscraper<span class="sc">::</span><span class="fu">run_app</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a></a>vegscraper<span class="sc">::</span><span class="fu">run_app</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><img data-src="wsapp.png"></p>
 </div><div class="column" style="width:10%;">
 
@@ -278,12 +279,12 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 <h2>R Package for Tidy Data</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install.packages("pak")</span></span>
-<span id="cb2-2"><a></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thiyangt/vegetablesSriLanka"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb2-2"><a></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thiyangt/vegetablesSriLanka"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(vegetablesSriLanka)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(vegetablesSriLanka)</span>
 <span id="cb3-2"><a></a><span class="fu">data</span>(<span class="st">"vegetables.srilanka"</span>)</span>
-<span id="cb3-3"><a></a><span class="fu">head</span>(vegetables.srilanka, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a></a><span class="fu">head</span>(vegetables.srilanka, <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        Date  Item      Type   Market Price
 1 2016-08-01 Beans    Retail Dambulla   165
@@ -291,7 +292,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 3 2016-08-01 Beans Wholesale Dambulla   130
 4 2016-08-01 Beans Wholesale   Pettah   140</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">tail</span>(vegetables.srilanka, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">tail</span>(vegetables.srilanka, <span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>             Date   Item      Type   Market Price
 123789 2026-01-23 Tomato    Retail Dambulla   420
@@ -325,10 +326,872 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
 </section>
 <section id="local-view-of-data" class="slide level2">
 <h2>Local View of Data</h2>
-<p><a href="https://thiyangt.github.io/vegetableBook/">https://thiyangt.github.io/vegetableBook/</a></p>
+<p><a href="https://thiyangt.github.io/vegetableBook/" class="uri">https://thiyangt.github.io/vegetableBook/</a></p>
 </section>
 <section id="global-view-of-data" class="slide level2">
 <h2>Global View of Data</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-2"><a></a>features_train_pca <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"features_train_pca.csv"</span>)</span>
+<span id="cb8-3"><a></a><span class="fu">colnames</span>(features_train_pca)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "...1"                   "Item"                   "Type"                  
+ [4] "Market"                 "trend_strength"         "seasonal_strength_week"
+ [7] "seasonal_peak_week"     "seasonal_trough_week"   "spikiness"             
+[10] "linearity"              "curvature"              "stl_e_acf1"            
+[13] "stl_e_acf10"            "acf1"                   "acf10"                 
+[16] "diff1_acf1"             "diff1_acf10"            "diff2_acf1"            
+[19] "diff2_acf10"            "season_acf1"            "pacf5"                 
+[22] "diff1_pacf5"            "diff2_pacf5"            "season_pacf"           
+[25] "zero_run_mean"          "nonzero_squared_cv"     "zero_start_prop"       
+[28] "zero_end_prop"          "lambda_guerrero"        "kpss_stat"             
+[31] "kpss_pvalue"            "pp_stat"                "pp_pvalue"             
+[34] "ndiffs"                 "nsdiffs"                "bp_stat"               
+[37] "bp_pvalue"              "lb_stat"                "lb_pvalue"             
+[40] "var_tiled_var"          "var_tiled_mean"         "shift_level_max"       
+[43] "shift_level_index"      "shift_var_max"          "shift_var_index"       
+[46] "shift_kl_max"           "shift_kl_index"         "spectral_entropy"      
+[49] "n_crossing_points"      "longest_flat_spot"      "coef_hurst"            
+[52] "stat_arch_lm"           "PC1"                    "PC2"                   
+[55] "PC3"                    "PC4"                    "PC5"                   
+[58] "PC6"                    "PC7"                    "PC8"                   
+[61] "PC9"                    "PC10"                   "PC11"                  
+[64] "PC12"                   "PC13"                   "PC14"                  
+[67] "PC15"                   "PC16"                   "PC17"                  
+[70] "PC18"                   "PC19"                   "PC20"                  
+[73] "PC21"                   "PC22"                   "PC23"                  
+[76] "PC24"                   "PC25"                   "PC26"                  
+[79] "PC27"                   "PC28"                   "PC29"                  
+[82] "PC30"                   "PC31"                   "PC32"                  
+[85] "PC33"                   "PC34"                   "PC35"                  
+[88] "PC36"                   "PC37"                   "PC38"                  
+[91] "PC39"                   "PC40"                   "PC41"                  </code></pre>
+</div>
+</div>
+</section>
+<section id="visualisation-of-time-series-in-feature-space" class="slide level2">
+<h2>Visualisation of Time Series in Feature-space</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" style="width:100.0%" class="r-stretch"></section></section>
+<section>
+<section id="forecasting" class="title-slide slide level1 center">
+<h1>Forecasting</h1>
+
+</section>
+<section id="benchmark-approaches" class="slide level2">
+<h2>Benchmark Approaches</h2>
+<ul>
+<li><p>Naive</p></li>
+<li><p>Snaive</p></li>
+<li><p>SARIMA</p></li>
+<li><p>ETS</p></li>
+<li><p>STL-ETS: STL decomposition is applied to separate trend and seasonal components. Then, ETS is applied to the seasonally adjusted series (original series minus seasonal component) to forecast the underlying trend.</p></li>
+<li><p>STL-ARIMA: STL decomposition is applied to separate trend and seasonal components. Then, ARIMA is applied to the seasonally adjusted series (original series minus seasonal component) to forecast the underlying trend.</p></li>
+</ul>
+</section>
+<section id="benchmark-approaches-forecasting-accuracy-mape" class="slide level2">
+<h2>Benchmark Approaches: Forecasting Accuracy (MAPE)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Market</th>
+<th style="text-align: right;">SARIMA</th>
+<th style="text-align: right;">ETS</th>
+<th style="text-align: right;">NAIVE</th>
+<th style="text-align: right;">SNAIVE</th>
+<th style="text-align: right;">STLARIMA</th>
+<th style="text-align: right;">STLETS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Beans</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">59.077587</td>
+<td style="text-align: right;">64.828616</td>
+<td style="text-align: right;">58.507491</td>
+<td style="text-align: right;">108.436468</td>
+<td style="text-align: right;">23.649829</td>
+<td style="text-align: right;">53.713437</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beans</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">54.331356</td>
+<td style="text-align: right;">57.403084</td>
+<td style="text-align: right;">55.098695</td>
+<td style="text-align: right;">81.140805</td>
+<td style="text-align: right;">37.660222</td>
+<td style="text-align: right;">48.648647</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Beans</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">64.526781</td>
+<td style="text-align: right;">70.653264</td>
+<td style="text-align: right;">62.941333</td>
+<td style="text-align: right;">116.552732</td>
+<td style="text-align: right;">23.225807</td>
+<td style="text-align: right;">51.335005</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beans</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">57.622468</td>
+<td style="text-align: right;">65.475519</td>
+<td style="text-align: right;">60.812950</td>
+<td style="text-align: right;">91.288138</td>
+<td style="text-align: right;">26.843587</td>
+<td style="text-align: right;">57.734725</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Big Onion (Imp)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">18.553603</td>
+<td style="text-align: right;">24.041338</td>
+<td style="text-align: right;">24.317699</td>
+<td style="text-align: right;">13.382049</td>
+<td style="text-align: right;">9.425726</td>
+<td style="text-align: right;">16.724839</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Big Onion (Imp)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">26.087689</td>
+<td style="text-align: right;">28.330789</td>
+<td style="text-align: right;">29.333255</td>
+<td style="text-align: right;">23.287175</td>
+<td style="text-align: right;">10.950574</td>
+<td style="text-align: right;">28.910345</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Big Onion (Imp)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">20.904782</td>
+<td style="text-align: right;">27.477490</td>
+<td style="text-align: right;">27.877394</td>
+<td style="text-align: right;">15.305864</td>
+<td style="text-align: right;">8.236411</td>
+<td style="text-align: right;">19.437876</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Big Onion (Imp)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">28.306977</td>
+<td style="text-align: right;">29.659085</td>
+<td style="text-align: right;">30.150657</td>
+<td style="text-align: right;">22.694613</td>
+<td style="text-align: right;">16.095898</td>
+<td style="text-align: right;">25.134425</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Brinjal</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">97.954756</td>
+<td style="text-align: right;">98.510110</td>
+<td style="text-align: right;">103.213780</td>
+<td style="text-align: right;">101.565071</td>
+<td style="text-align: right;">36.934560</td>
+<td style="text-align: right;">76.665585</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Brinjal</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">38.031915</td>
+<td style="text-align: right;">42.987587</td>
+<td style="text-align: right;">36.030980</td>
+<td style="text-align: right;">76.472294</td>
+<td style="text-align: right;">22.097211</td>
+<td style="text-align: right;">18.727430</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Brinjal</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">112.070003</td>
+<td style="text-align: right;">114.424394</td>
+<td style="text-align: right;">117.963057</td>
+<td style="text-align: right;">116.137951</td>
+<td style="text-align: right;">43.135470</td>
+<td style="text-align: right;">87.687166</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Brinjal</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">50.597300</td>
+<td style="text-align: right;">53.259485</td>
+<td style="text-align: right;">48.701452</td>
+<td style="text-align: right;">98.215320</td>
+<td style="text-align: right;">32.283265</td>
+<td style="text-align: right;">28.119516</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cabbage</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">18.447109</td>
+<td style="text-align: right;">17.085293</td>
+<td style="text-align: right;">19.212022</td>
+<td style="text-align: right;">19.122391</td>
+<td style="text-align: right;">10.384040</td>
+<td style="text-align: right;">18.480996</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cabbage</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">22.769937</td>
+<td style="text-align: right;">25.064401</td>
+<td style="text-align: right;">22.769937</td>
+<td style="text-align: right;">21.210391</td>
+<td style="text-align: right;">9.660370</td>
+<td style="text-align: right;">20.503819</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cabbage</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">21.514599</td>
+<td style="text-align: right;">25.389992</td>
+<td style="text-align: right;">22.425360</td>
+<td style="text-align: right;">22.325050</td>
+<td style="text-align: right;">9.836688</td>
+<td style="text-align: right;">17.494443</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cabbage</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">29.625997</td>
+<td style="text-align: right;">30.540006</td>
+<td style="text-align: right;">28.274428</td>
+<td style="text-align: right;">26.366215</td>
+<td style="text-align: right;">17.653159</td>
+<td style="text-align: right;">25.179517</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Carrot</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">24.335831</td>
+<td style="text-align: right;">22.220626</td>
+<td style="text-align: right;">22.149863</td>
+<td style="text-align: right;">31.024097</td>
+<td style="text-align: right;">24.643254</td>
+<td style="text-align: right;">21.850341</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Carrot</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">24.342114</td>
+<td style="text-align: right;">21.744767</td>
+<td style="text-align: right;">23.766240</td>
+<td style="text-align: right;">27.962167</td>
+<td style="text-align: right;">18.095422</td>
+<td style="text-align: right;">16.648450</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Carrot</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">26.680394</td>
+<td style="text-align: right;">27.200685</td>
+<td style="text-align: right;">24.184554</td>
+<td style="text-align: right;">33.954717</td>
+<td style="text-align: right;">24.535849</td>
+<td style="text-align: right;">23.814921</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Carrot</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">28.305677</td>
+<td style="text-align: right;">25.562162</td>
+<td style="text-align: right;">27.306444</td>
+<td style="text-align: right;">32.137238</td>
+<td style="text-align: right;">20.809287</td>
+<td style="text-align: right;">19.457926</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Green Chilli</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">75.755763</td>
+<td style="text-align: right;">60.955187</td>
+<td style="text-align: right;">72.192265</td>
+<td style="text-align: right;">78.191909</td>
+<td style="text-align: right;">17.588434</td>
+<td style="text-align: right;">41.893727</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Green Chilli</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">42.701738</td>
+<td style="text-align: right;">41.514837</td>
+<td style="text-align: right;">41.514837</td>
+<td style="text-align: right;">71.781884</td>
+<td style="text-align: right;">19.139696</td>
+<td style="text-align: right;">24.740258</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Green Chilli</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">79.838368</td>
+<td style="text-align: right;">65.051587</td>
+<td style="text-align: right;">76.217960</td>
+<td style="text-align: right;">82.374483</td>
+<td style="text-align: right;">18.760405</td>
+<td style="text-align: right;">44.937231</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Green Chilli</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">47.968933</td>
+<td style="text-align: right;">54.479874</td>
+<td style="text-align: right;">45.676780</td>
+<td style="text-align: right;">79.869439</td>
+<td style="text-align: right;">22.096612</td>
+<td style="text-align: right;">29.480087</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lime</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">40.832579</td>
+<td style="text-align: right;">50.847644</td>
+<td style="text-align: right;">42.044730</td>
+<td style="text-align: right;">34.016362</td>
+<td style="text-align: right;">30.269743</td>
+<td style="text-align: right;">49.238757</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lime</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">16.943880</td>
+<td style="text-align: right;">14.009662</td>
+<td style="text-align: right;">14.009662</td>
+<td style="text-align: right;">16.086956</td>
+<td style="text-align: right;">41.173294</td>
+<td style="text-align: right;">18.887781</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lime</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">52.398147</td>
+<td style="text-align: right;">66.974104</td>
+<td style="text-align: right;">53.933099</td>
+<td style="text-align: right;">43.827395</td>
+<td style="text-align: right;">44.304577</td>
+<td style="text-align: right;">64.577964</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lime</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">24.198335</td>
+<td style="text-align: right;">27.800174</td>
+<td style="text-align: right;">22.178305</td>
+<td style="text-align: right;">25.010979</td>
+<td style="text-align: right;">69.407686</td>
+<td style="text-align: right;">30.324372</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Potato (Imp)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">10.348468</td>
+<td style="text-align: right;">10.109970</td>
+<td style="text-align: right;">9.281244</td>
+<td style="text-align: right;">13.131801</td>
+<td style="text-align: right;">9.142112</td>
+<td style="text-align: right;">8.880905</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Potato (Imp)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">6.154115</td>
+<td style="text-align: right;">5.930935</td>
+<td style="text-align: right;">6.154115</td>
+<td style="text-align: right;">7.065461</td>
+<td style="text-align: right;">6.022379</td>
+<td style="text-align: right;">5.570961</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Potato (Imp)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">13.653327</td>
+<td style="text-align: right;">12.383181</td>
+<td style="text-align: right;">10.990375</td>
+<td style="text-align: right;">15.519996</td>
+<td style="text-align: right;">10.500549</td>
+<td style="text-align: right;">11.317743</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Potato (Imp)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">4.675097</td>
+<td style="text-align: right;">4.624694</td>
+<td style="text-align: right;">4.675018</td>
+<td style="text-align: right;">5.464367</td>
+<td style="text-align: right;">10.807832</td>
+<td style="text-align: right;">6.378922</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pumpkin</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">13.624304</td>
+<td style="text-align: right;">14.602135</td>
+<td style="text-align: right;">13.612349</td>
+<td style="text-align: right;">16.227068</td>
+<td style="text-align: right;">14.781445</td>
+<td style="text-align: right;">18.503533</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pumpkin</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">8.686944</td>
+<td style="text-align: right;">9.287793</td>
+<td style="text-align: right;">8.511181</td>
+<td style="text-align: right;">9.054659</td>
+<td style="text-align: right;">12.318928</td>
+<td style="text-align: right;">12.623855</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pumpkin</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">18.407489</td>
+<td style="text-align: right;">20.784814</td>
+<td style="text-align: right;">18.550033</td>
+<td style="text-align: right;">21.364714</td>
+<td style="text-align: right;">19.655367</td>
+<td style="text-align: right;">24.870564</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pumpkin</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">9.225888</td>
+<td style="text-align: right;">9.160711</td>
+<td style="text-align: right;">8.761528</td>
+<td style="text-align: right;">8.349042</td>
+<td style="text-align: right;">14.051518</td>
+<td style="text-align: right;">14.668574</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Snake gourd</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">13.399350</td>
+<td style="text-align: right;">12.698480</td>
+<td style="text-align: right;">10.894863</td>
+<td style="text-align: right;">29.208316</td>
+<td style="text-align: right;">13.941379</td>
+<td style="text-align: right;">14.164772</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Snake gourd</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">66.488972</td>
+<td style="text-align: right;">66.148788</td>
+<td style="text-align: right;">66.148737</td>
+<td style="text-align: right;">67.437867</td>
+<td style="text-align: right;">45.482821</td>
+<td style="text-align: right;">59.286022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Snake gourd</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">14.200898</td>
+<td style="text-align: right;">14.001407</td>
+<td style="text-align: right;">11.392231</td>
+<td style="text-align: right;">32.533800</td>
+<td style="text-align: right;">14.255837</td>
+<td style="text-align: right;">15.622499</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Snake gourd</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">76.804698</td>
+<td style="text-align: right;">80.415266</td>
+<td style="text-align: right;">78.223414</td>
+<td style="text-align: right;">79.704174</td>
+<td style="text-align: right;">55.667646</td>
+<td style="text-align: right;">69.277871</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tomato</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">12.112477</td>
+<td style="text-align: right;">11.816832</td>
+<td style="text-align: right;">12.028059</td>
+<td style="text-align: right;">21.189663</td>
+<td style="text-align: right;">14.442377</td>
+<td style="text-align: right;">18.904901</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tomato</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">14.161304</td>
+<td style="text-align: right;">13.845590</td>
+<td style="text-align: right;">13.968736</td>
+<td style="text-align: right;">25.764048</td>
+<td style="text-align: right;">20.394775</td>
+<td style="text-align: right;">27.309844</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tomato</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">12.932309</td>
+<td style="text-align: right;">12.555720</td>
+<td style="text-align: right;">12.895251</td>
+<td style="text-align: right;">22.962383</td>
+<td style="text-align: right;">15.365411</td>
+<td style="text-align: right;">20.184039</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tomato</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">15.695076</td>
+<td style="text-align: right;">15.108691</td>
+<td style="text-align: right;">15.273017</td>
+<td style="text-align: right;">28.435891</td>
+<td style="text-align: right;">21.699160</td>
+<td style="text-align: right;">32.642905</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Potato (Local)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">13.308768</td>
+<td style="text-align: right;">9.489494</td>
+<td style="text-align: right;">11.371662</td>
+<td style="text-align: right;">17.061942</td>
+<td style="text-align: right;">18.674147</td>
+<td style="text-align: right;">12.473323</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Potato (Local)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">4.702556</td>
+<td style="text-align: right;">4.913449</td>
+<td style="text-align: right;">4.913449</td>
+<td style="text-align: right;">4.918991</td>
+<td style="text-align: right;">4.653313</td>
+<td style="text-align: right;">4.941352</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Potato (Local)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">14.306793</td>
+<td style="text-align: right;">11.546640</td>
+<td style="text-align: right;">12.254791</td>
+<td style="text-align: right;">18.163302</td>
+<td style="text-align: right;">19.488281</td>
+<td style="text-align: right;">13.028638</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Potato (Local)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">12.459535</td>
+<td style="text-align: right;">12.485653</td>
+<td style="text-align: right;">12.485611</td>
+<td style="text-align: right;">13.461594</td>
+<td style="text-align: right;">18.185112</td>
+<td style="text-align: right;">16.538383</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Big Onion (Local)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">16.199774</td>
+<td style="text-align: right;">16.638055</td>
+<td style="text-align: right;">15.964668</td>
+<td style="text-align: right;">17.520916</td>
+<td style="text-align: right;">14.179103</td>
+<td style="text-align: right;">14.204758</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Big Onion (Local)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">56.090325</td>
+<td style="text-align: right;">52.391647</td>
+<td style="text-align: right;">54.794495</td>
+<td style="text-align: right;">67.544350</td>
+<td style="text-align: right;">54.976663</td>
+<td style="text-align: right;">48.481253</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Big Onion (Local)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">18.673563</td>
+<td style="text-align: right;">18.568288</td>
+<td style="text-align: right;">17.913557</td>
+<td style="text-align: right;">19.562965</td>
+<td style="text-align: right;">16.531702</td>
+<td style="text-align: right;">16.829201</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Big Onion (Local)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">33.353648</td>
+<td style="text-align: right;">31.494833</td>
+<td style="text-align: right;">33.511352</td>
+<td style="text-align: right;">41.677143</td>
+<td style="text-align: right;">30.971563</td>
+<td style="text-align: right;">27.687909</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Red Onion (Imp)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">10.583588</td>
+<td style="text-align: right;">11.953342</td>
+<td style="text-align: right;">13.270295</td>
+<td style="text-align: right;">7.613194</td>
+<td style="text-align: right;">10.453624</td>
+<td style="text-align: right;">6.956062</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red Onion (Imp)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">0.483125</td>
+<td style="text-align: right;">0.866183</td>
+<td style="text-align: right;">0.000000</td>
+<td style="text-align: right;">1.242236</td>
+<td style="text-align: right;">7.067998</td>
+<td style="text-align: right;">2.744728</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Red Onion (Imp)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">11.364421</td>
+<td style="text-align: right;">12.836504</td>
+<td style="text-align: right;">14.196789</td>
+<td style="text-align: right;">8.124297</td>
+<td style="text-align: right;">9.903692</td>
+<td style="text-align: right;">7.606892</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red Onion (Imp)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">2.104870</td>
+<td style="text-align: right;">2.012377</td>
+<td style="text-align: right;">2.520325</td>
+<td style="text-align: right;">4.000545</td>
+<td style="text-align: right;">7.352265</td>
+<td style="text-align: right;">14.537448</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Red Onion (Local)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">16.096242</td>
+<td style="text-align: right;">17.967610</td>
+<td style="text-align: right;">16.558858</td>
+<td style="text-align: right;">17.347105</td>
+<td style="text-align: right;">17.382001</td>
+<td style="text-align: right;">15.118431</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red Onion (Local)</td>
+<td style="text-align: left;">Retail</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">63.000210</td>
+<td style="text-align: right;">63.483952</td>
+<td style="text-align: right;">63.302351</td>
+<td style="text-align: right;">65.351219</td>
+<td style="text-align: right;">70.625670</td>
+<td style="text-align: right;">63.937379</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Red Onion (Local)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Dambulla</td>
+<td style="text-align: right;">18.108465</td>
+<td style="text-align: right;">18.340964</td>
+<td style="text-align: right;">18.685927</td>
+<td style="text-align: right;">19.256892</td>
+<td style="text-align: right;">19.106399</td>
+<td style="text-align: right;">17.046904</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Red Onion (Local)</td>
+<td style="text-align: left;">Wholesale</td>
+<td style="text-align: left;">Pettah</td>
+<td style="text-align: right;">13.457185</td>
+<td style="text-align: right;">14.692989</td>
+<td style="text-align: right;">12.919165</td>
+<td style="text-align: right;">18.619037</td>
+<td style="text-align: right;">8.154449</td>
+<td style="text-align: right;">5.413868</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="mean-mape-across-all-time-series" class="slide level2">
+<h2>Mean MAPE Across All Time Series</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: right;">Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STLARIMA</td>
+<td style="text-align: right;">21.91888</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STLETS</td>
+<td style="text-align: right;">27.13507</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NAIVE</td>
+<td style="text-align: right;">30.31381</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SARIMA</td>
+<td style="text-align: right;">30.32647</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ETS</td>
+<td style="text-align: right;">31.11081</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SNAIVE</td>
+<td style="text-align: right;">37.57699</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="best-method-for-each-series" class="slide level2">
+<h2>Best Method for Each Series</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                Item      Type   Market    Model      MAPE
+1              Beans    Retail Dambulla STLARIMA 23.649829
+2              Beans    Retail   Pettah STLARIMA 37.660222
+3              Beans Wholesale Dambulla STLARIMA 23.225807
+4              Beans Wholesale   Pettah STLARIMA 26.843587
+5    Big Onion (Imp)    Retail Dambulla STLARIMA  9.425726
+6    Big Onion (Imp)    Retail   Pettah STLARIMA 10.950574
+7    Big Onion (Imp) Wholesale Dambulla STLARIMA  8.236411
+8    Big Onion (Imp) Wholesale   Pettah STLARIMA 16.095898
+9  Big Onion (Local)    Retail Dambulla STLARIMA 14.179103
+10 Big Onion (Local)    Retail   Pettah   STLETS 48.481253
+11 Big Onion (Local) Wholesale Dambulla STLARIMA 16.531701
+12 Big Onion (Local) Wholesale   Pettah   STLETS 27.687909
+13           Brinjal    Retail Dambulla STLARIMA 36.934560
+14           Brinjal    Retail   Pettah   STLETS 18.727430
+15           Brinjal Wholesale Dambulla STLARIMA 43.135470
+16           Brinjal Wholesale   Pettah   STLETS 28.119516
+17           Cabbage    Retail Dambulla STLARIMA 10.384040
+18           Cabbage    Retail   Pettah STLARIMA  9.660370
+19           Cabbage Wholesale Dambulla STLARIMA  9.836688
+20           Cabbage Wholesale   Pettah STLARIMA 17.653159
+21            Carrot    Retail Dambulla   STLETS 21.850341
+22            Carrot    Retail   Pettah   STLETS 16.648450
+23            Carrot Wholesale Dambulla   STLETS 23.814921
+24            Carrot Wholesale   Pettah   STLETS 19.457926
+25      Green Chilli    Retail Dambulla STLARIMA 17.588434
+26      Green Chilli    Retail   Pettah STLARIMA 19.139696
+27      Green Chilli Wholesale Dambulla STLARIMA 18.760405
+28      Green Chilli Wholesale   Pettah STLARIMA 22.096612
+29              Lime    Retail Dambulla STLARIMA 30.269743
+30              Lime    Retail   Pettah      ETS 14.009662
+31              Lime Wholesale Dambulla   SNAIVE 43.827395
+32              Lime Wholesale   Pettah    NAIVE 22.178305
+33      Potato (Imp)    Retail Dambulla   STLETS  8.880905
+34      Potato (Imp)    Retail   Pettah   STLETS  5.570961
+35      Potato (Imp) Wholesale Dambulla STLARIMA 10.500549
+36      Potato (Imp) Wholesale   Pettah      ETS  4.624694
+37    Potato (Local)    Retail Dambulla      ETS  9.489494
+38    Potato (Local)    Retail   Pettah STLARIMA  4.653313
+39    Potato (Local) Wholesale Dambulla      ETS 11.546640
+40    Potato (Local) Wholesale   Pettah   SARIMA 12.459535
+41           Pumpkin    Retail Dambulla    NAIVE 13.612349
+42           Pumpkin    Retail   Pettah    NAIVE  8.511181
+43           Pumpkin Wholesale Dambulla   SARIMA 18.407489
+44           Pumpkin Wholesale   Pettah   SNAIVE  8.349042
+45   Red Onion (Imp)    Retail Dambulla   STLETS  6.956062
+46   Red Onion (Imp)    Retail   Pettah    NAIVE  0.000000
+47   Red Onion (Imp) Wholesale Dambulla   STLETS  7.606892
+48   Red Onion (Imp) Wholesale   Pettah      ETS  2.012377
+49 Red Onion (Local)    Retail Dambulla   STLETS 15.118431
+50 Red Onion (Local)    Retail   Pettah   SARIMA 63.000210
+51 Red Onion (Local) Wholesale Dambulla   STLETS 17.046904
+52 Red Onion (Local) Wholesale   Pettah   STLETS  5.413868
+53       Snake gourd    Retail Dambulla    NAIVE 10.894863
+54       Snake gourd    Retail   Pettah STLARIMA 45.482821
+55       Snake gourd Wholesale Dambulla    NAIVE 11.392231
+56       Snake gourd Wholesale   Pettah STLARIMA 55.667647
+57            Tomato    Retail Dambulla      ETS 11.816832
+58            Tomato    Retail   Pettah      ETS 13.845590
+59            Tomato Wholesale Dambulla      ETS 12.555720
+60            Tomato Wholesale   Pettah      ETS 15.108691</code></pre>
+</div>
+</div>
 
 
 </section></section>
@@ -521,7 +1384,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
         margin: 5.0e-2,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -548,266 +1411,211 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
-
-    
 
       })();
-
     </script>
 
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
           for (const childEl of codeEl.children) {
             if (isCodeAnnotation(childEl)) {
               childEl.remove();
             }
           }
           return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/thiyangt\.github\.io\/F4SGProgress\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/thiyangt\.github\.io\/F4SGProgress\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
             }
           }
-        }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
           }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
           }
-        } else {
-          return undefined;
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>
