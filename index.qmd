@@ -179,7 +179,7 @@ p1|p2|p3
 
 ## RAF-RF: Package
 
-```r
+``` r
 # install.packages("pak")
 pak::pak("thiyangt/vegcast")
 library(vegcast)
@@ -187,63 +187,56 @@ library(vegcast)
 
 # Feature Classes and Features
 
-##
+## 
 
 :::::: columns
 ::: {.column width="50%"}
-
 **Time Features**
 
-- Day, Year, Month, Week
+-   Day, Year, Month, Week
 
 **Lag Features**
 
-- lag7, lag14, lag30, lag365
+-   lag7, lag14, lag30, lag365
 
 **PCA Features**
 
-- First two PCs computed from lag features
+-   First two PCs computed from lag features
 
 **Compute Past 30 window values**
 
-- Past 30 window values
-
+-   Past 30 window values
 :::
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="40%"}
-
 **Features based on past 30 window values**
- 
- - Minimum, maximum, median, Q1, Q3, Standarad Deviation
- 
+
+-   Minimum, maximum, median, Q1, Q3, Standarad Deviation
+
 **Fourier terms**
-      
-   - `sin_week = sin(2 * pi * t / 7)`, `cos_week = cos(2 * pi * t / 7)`,
-      `sin_year = sin(2 * pi * t / 365)`, `cos_year = cos(2 * pi * t / 365)`
+
+-   `sin_week = sin(2 * pi * t / 7)`, `cos_week = cos(2 * pi * t / 7)`, `sin_year = sin(2 * pi * t / 365)`, `cos_year = cos(2 * pi * t / 365)`
 :::
 ::::::
 
 ## Model Fitting
 
-- The following two features are duplicated in the model.
+-   The following two features are duplicated in the model.
 
-- Reason: To give higher weight to these features in the model.
+-   Reason: To give higher weight to these features in the model.
 
-- By doing so, I aim to signal to the model that recent observations carry more importance.
-
+-   By doing so, I aim to signal to the model that recent observations carry more importance.
 
 **Lag Features**
 
-- lag7, lag14, lag30, lag365
+-   lag7, lag14, lag30, lag365
 
 **Compute Past 30 window values**
 
-- Past 30 window values
-
-
+-   Past 30 window values
 
 ## Forecas Accuracy (MAPE)
 
@@ -258,7 +251,16 @@ accuracy_snaive <- read_csv("accuracy_snaive.csv")
 accuracy_stlarima <- read_csv("accuracy_stlarima.csv")
 accuracy_stlets <- read_csv("accuracy_stlets.csv")
 error_rf <- read_csv("mean_errors_rf.csv")
+error_nodup <- read_csv("mean_errors_rf2.csv")
 mean_errors_rf <- error_rf |>
+  group_by(Item, Type, Market) %>%
+  summarise(
+    mean_RMSE = mean(mean_RMSE, na.rm = TRUE),
+    mean_MAE  = mean(mean_MAE, na.rm = TRUE),
+    mean_MAPE = mean(mean_MAPE, na.rm = TRUE)
+  )
+
+mean_errors_rf2 <- error_nodup |>
   group_by(Item, Type, Market) %>%
   summarise(
     mean_RMSE = mean(mean_RMSE, na.rm = TRUE),
@@ -271,6 +273,7 @@ all$NAIVE <- accuracy_naive$MAPE
 all$SNAIVE <- accuracy_snaive$MAPE
 all$STLARIMA <- accuracy_stlarima$MAPE
 all$STLETS <- accuracy_stlets$MAPE
+all$RF <- mean_errors_rf2$mean_MAPE
 all$RAFRF <- mean_errors_rf$mean_MAPE
 all <- all |> select(Item, Type, Market, 
                      SARIMA,
@@ -279,6 +282,7 @@ all <- all |> select(Item, Type, Market,
                      SNAIVE,
                      STLARIMA,
                      STLETS, 
+                     RF,
                      RAFRF)
 library(kableExtra)
 
@@ -349,7 +353,7 @@ p4
 
 ```
 
-## Variable Importance (Top 40)
+## Variable Importance (Top 30)
 
 ```{r, echo=FALSE}
 # Load later
@@ -405,9 +409,34 @@ ggplot(top20, aes(x = reorder(Variable, Importance), y = Importance)) +
        y = "Importance")
 ```
 
-## Importance of this model
 
+## Variable Importance (Top 30): Model Without Duplicate Features
 
+```{r, echo=FALSE}
+# Load later
+model_rf <- readRDS("model_rf2.rds")
+# Extract variable importance
+var_imp <- model_rf$variable.importance
+
+# Sort from most to least important
+var_imp_sorted <- sort(var_imp, decreasing = TRUE)
+#var_imp_sorted
+library(ggplot2)
+
+# Convert to a tidy data frame
+var_imp_df <- data.frame(
+  Variable = names(var_imp_sorted),
+  Importance = var_imp_sorted
+)
+
+top20 <- var_imp_df[1:30,]
+ggplot(top20, aes(x = reorder(Variable, Importance), y = Importance)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() + # flip for better readability
+  labs(title = "Variable Importance (Permutation)",
+       x = "Variable",
+       y = "Importance")
+```
 
 ## Other work
 
@@ -415,39 +444,39 @@ Another component of this project is undertaken by a BSc (Honours) Statistics un
 
 ## Current Outcomes
 
-- 3 R Packages
+-   3 R Packages
 
-- Project website: https://thiyangt.github.io/pricecast.vegetables/
+-   Project website: https://thiyangt.github.io/pricecast.vegetables/
 
-- EDA book: https://thiyangt.github.io/vegetableBook/
+-   EDA book: https://thiyangt.github.io/vegetableBook/
 
 ## Our method
 
-- Improves predictive accuracy with retrieval-augmented features
+-   Improves predictive accuracy with retrieval-augmented features
 
-- Highlights the importance of recent observations
+-   Highlights the importance of recent observations
 
-- Provides interpretable insights for decision-making
+-   Provides interpretable insights for decision-making
 
-- Easy to train
+-   Easy to train
 
-- More practical and explainable than deep neural networks
+-   More practical and explainable than deep neural networks
 
 ## Future work
 
-- Use of explainable methods to interpret model behaviour and understand underlying patterns
+-   Use of explainable methods to interpret model behaviour and understand underlying patterns
 
-- Application of cross-validation and grid search techniques for systematic parameter tuning
+-   Application of cross-validation and grid search techniques for systematic parameter tuning
 
 ## Future Work
 
-- Integrate the model into web app or mobile app 
+-   Integrate the model into web app or mobile app
 
-- Present work at ISF 2026
+-   Present work at ISF 2026
 
-- Manuscript writing
+-   Manuscript writing
 
-- Work with the International Water Management Institute (IWMI) to translate research into policy and enhance knowledge sharing.
+-   Work with the International Water Management Institute (IWMI) to translate research into policy and enhance knowledge sharing.
 
 ## Acknowledgement
 
@@ -455,5 +484,4 @@ Dr Priyanga Dilini Talagala
 
 Thinuri Jayarathne
 
-
-Contact: ttalagala@sjp.ac.lk
+Contact: ttalagala\@sjp.ac.lk
