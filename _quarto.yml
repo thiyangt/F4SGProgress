@@ -1,9 +1,11 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "Vegetable Price Forecasting for Petta and Dambulla Markets in Sri Lanka"
-navbar:
-  left:
-  - text: "Home"
-href: index.qmd
+  title: "F4SG-Midway Review"
+  site-url: ""
+  
+format:
+  html:
+    theme: default
