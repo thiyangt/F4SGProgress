@@ -580,7 +580,7 @@ Thiyanga S. Talagala <br> Department of Statistics, <br> Faculty of Applied Scie
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/thiyangt\.github\.io\/F4SGProgress\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

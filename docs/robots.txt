@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://thiyangt.github.io/F4SGProgress/sitemap.xml

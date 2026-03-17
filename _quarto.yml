@@ -4,7 +4,7 @@ project:
 
 website:
   title: "F4SG-Midway Review"
-  site-url: ""
+  site-url: "https://thiyangt.github.io/F4SGProgress/"
   
 format:
   html:
